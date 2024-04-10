@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "heyOctober";
+  /*Can be any text*/
+  src: local("heyOctober"),
+    url("../public/fonts/HeyOctober.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "GothamMedium";
+  /*Can be any text*/
+  src: local("GothamMedium"),
+    url("../public/fonts/GothamMedium.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+}
+
+.section-component {
+  height: 100vh;
+  background-image: url('/public/shopImages/Mask group.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .button {
+  background-image: url('/public/shopImages/welcomeShop-bg.png');
+  background-repeat: no-repeat;
+} */
+
+/* .shop-main {
+  height: 100vh;
+  background-image: url('/public/shopImages/scrappy-shop-background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+.shop-screen {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shop-bags-bg {
+  background-image: url('/public/shopImages/shop-bags-backgroundImage.png');
+}
+
+.shop-tshirts-bg {
+  background-image: url('/public/shopImages/shop-tshirts-backgroundImage.png');
+}
+
+.shop-robots-bg {
+  background-image: url('/public/shopImages/shop-robots-backgroundImage.png');
+}
+
+.shop-books-bg {
+  background-image: url('/public/shopImages/shop-books-backgroundImage.png');
+}
+
+.shop-bag-header {
+  font-family: "GothamMedium";
+  font-weight: 500;
+  size: 20px;
+  height: 10vh;
+  color: #ffffff;
+  background-image: url('/public/shopImages/shop-header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shop-backIcon {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.product {
+  padding: 0;
+  margin: auto;
+}
+
+/* .product img {
+  width: 100%;
+} */
+
+.product-tag {
+  /* border: solid 1px red; */
+  background-image: url('/public/shopImages/product-image-tag.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+.bg-box {
+  background-image: url('/public/shopImages/product-image-tag.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 130px;
+  object-fit: contain;
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+
+}
+
+.bg-box {
+  padding-top: 6px;
+  margin-bottom: 0px;
+}
+
+.card-new {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-new img {
+  width: 200px;
+}
+
+
+.scrappy-box {
+  position: relative;
+}
+
+.shop-title {
+  position: absolute;
+  top: 32%;
+  left: 6%;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+.products-container {
+  overflow-y: auto;
+  height: 90vh;
+}
+
+.shop-points {
+  position: absolute;
+  top: 32%;
+  left: 85%;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+}

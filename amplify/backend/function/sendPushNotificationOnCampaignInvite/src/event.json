@@ -1,0 +1,46 @@
+{
+  "Records": [
+    {
+      "eventID": "a9d5208a8afdcae8b978b8a0e64d72d6",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "ap-south-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1681260938,
+        "Keys": {
+          "id": {
+            "S": "f73a8c91-f1dc-4beb-8882-4ae755abe8d3"
+          }
+        },
+        "NewImage": {
+          "studentId": {
+            "S": "f73a8c91-f1dc-4beb-8882-4ae755abe8d3"
+          },
+          "createdAt": {
+            "S": "2023-04-12T00:55:37.713Z"
+          },
+          "campaignId": {
+            "S": "f73a8c91-f1dc-4beb-8882-4ae755abe8d3"
+          },
+          "__typename": {
+            "S": "CampaignInvite"
+          },
+          "id": {
+            "S": "f73a8c91-f1dc-4beb-8882-4ae755abe8d3"
+          },
+          "status": {
+            "BOOL": false
+          },
+          "updatedAt": {
+            "S": "2023-04-12T00:55:37.713Z"
+          }
+        },
+        "SequenceNumber": "102679400000000003804603438",
+        "SizeBytes": 207,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/CampaignInvite-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-21T10:10:20.925"
+    }
+  ]
+}

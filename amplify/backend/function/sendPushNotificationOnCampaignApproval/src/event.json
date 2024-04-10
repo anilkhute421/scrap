@@ -1,0 +1,161 @@
+{
+  "Records": [
+    {
+      "eventID": "1b62461708cba0620be83bc9c5db356b",
+      "eventName": "MODIFY",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "ap-south-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1681260300,
+        "Keys": {
+          "id": {
+            "S": "ccd5fab4-f3b9-4c82-90a2-5fa2bb153564"
+          }
+        },
+        "NewImage": {
+          "__typename": {
+            "S": "Campaign"
+          },
+          "changeLog": {
+            "L": []
+          },
+          "description": {
+            "M": {
+              "campaignGoal": {
+                "S": "eqweqweq"
+              },
+              "topViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/40addaf4-8264-4aff-8e43-d26e03b04325"
+              },
+              "selectEverythingYouNeed": {
+                "S": "[I’d love my school to be a part of it]"
+              },
+              "leftViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/c0053bb4-862f-4e2f-887f-ef42bbd4f165"
+              },
+              "locationDescription": {
+                "S": "sdad"
+              },
+              "location": {
+                "S": "dasd"
+              },
+              "rightViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/04e351df-6bbe-48c9-bb72-8ca758172a57"
+              },
+              "startedOn": {
+                "S": "2023-04-07 19:00:45.188841"
+              },
+              "solvingProblems": {
+                "S": "dasd"
+              }
+            }
+          },
+          "otherCategory": {
+            "S": ""
+          },
+          "studentId": {
+            "S": "520da9b6-41e5-4f2b-9e95-637663a84ea3"
+          },
+          "createdAt": {
+            "S": "2023-04-07T13:33:22.387Z"
+          },
+          "approved": {
+            "BOOL": true
+          },
+          "schoolId": {
+            "S": "ChIJhW1UQjYSrjsR53o0RESqziQ"
+          },
+          "name": {
+            "S": "FilmStarVineet"
+          },
+          "id": {
+            "S": "ccd5fab4-f3b9-4c82-90a2-5fa2bb153564"
+          },
+          "category": {
+            "S": "CLIMATE_CHANGE"
+          },
+          "live": {
+            "BOOL": false
+          },
+          "updatedAt": {
+            "S": "2023-04-12T00:45:00.042Z"
+          }
+        },
+        "OldImage": {
+          "__typename": {
+            "S": "Campaign"
+          },
+          "changeLog": {
+            "L": []
+          },
+          "description": {
+            "M": {
+              "campaignGoal": {
+                "S": "eqweqweq"
+              },
+              "topViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/40addaf4-8264-4aff-8e43-d26e03b04325"
+              },
+              "selectEverythingYouNeed": {
+                "S": "[I’d love my school to be a part of it]"
+              },
+              "leftViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/c0053bb4-862f-4e2f-887f-ef42bbd4f165"
+              },
+              "locationDescription": {
+                "S": "sdad"
+              },
+              "location": {
+                "S": "dasd"
+              },
+              "rightViewImage": {
+                "S": "https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/04e351df-6bbe-48c9-bb72-8ca758172a57"
+              },
+              "startedOn": {
+                "S": "2023-04-07 19:00:45.188841"
+              },
+              "solvingProblems": {
+                "S": "dasd"
+              }
+            }
+          },
+          "otherCategory": {
+            "S": ""
+          },
+          "studentId": {
+            "S": "520da9b6-41e5-4f2b-9e95-637663a84ea3"
+          },
+          "createdAt": {
+            "S": "2023-04-07T13:33:22.387Z"
+          },
+          "approved": {
+            "BOOL": false
+          },
+          "schoolId": {
+            "S": "ChIJhW1UQjYSrjsR53o0RESqziQ"
+          },
+          "name": {
+            "S": "FilmStarVineet"
+          },
+          "id": {
+            "S": "ccd5fab4-f3b9-4c82-90a2-5fa2bb153564"
+          },
+          "category": {
+            "S": "CLIMATE_CHANGE"
+          },
+          "live": {
+            "BOOL": false
+          },
+          "updatedAt": {
+            "S": "2023-04-07T13:33:22.387Z"
+          }
+        },
+        "SequenceNumber": "187450000000000020836775737",
+        "SizeBytes": 1730,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/Campaign-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-03T15:46:24.658"
+    }
+  ]
+}

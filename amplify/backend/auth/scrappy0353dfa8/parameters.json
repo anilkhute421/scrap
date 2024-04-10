@@ -1,0 +1,24 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "scrappy0353dfa8",
+  "serviceType": "imported",
+  "region": "ap-south-1",
+  "usernameAttributes": [
+    "email",
+    "phone_number"
+  ],
+  "requiredAttributes": [
+    "given_name",
+    "family_name"
+  ],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OPTIONAL",
+  "autoVerifiedAttributes": [
+    "phone_number"
+  ],
+  "mfaTypes": [
+    "SMS Text Message",
+    "TOTP"
+  ]
+}

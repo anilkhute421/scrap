@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "api": {
+      "scrappy": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "snsPlatformApplicationArn",
+      "environmentVariableName": "SNS_PLATFORM_APPLICATION_ARN"
+    }
+  ]
+}

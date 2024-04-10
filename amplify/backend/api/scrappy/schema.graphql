@@ -1,0 +1,326 @@
+enum ChallengeStatus {
+  INVITED
+  PENDING
+  IN_PROGRESS
+  SUBMITTED
+  IN_REVIEW
+  APPROVED
+  DECLINED
+}
+
+type ChallengeActivity @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  groupId: ID! @index(name: "byGroup")
+  group: Group @belongsTo(fields: ["groupId"])
+  studentId: ID @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+  challengeId: ID! @index(name: "byChallenge")
+  challenge: Challenge @belongsTo(fields: ["challengeId"])
+  invitedByStudentId: ID
+  research: AWSJSON
+  design: AWSJSON
+  build: AWSJSON
+  report: AWSJSON
+  status: ChallengeStatus
+  point: Int
+}
+
+type Challenge @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: AWSJSON
+  description: AWSJSON
+  research: AWSJSON
+  design: AWSJSON
+  build: AWSJSON
+  report: AWSJSON
+  point: Int
+  challengeActivities: [ChallengeActivity] @hasMany(indexName: "byChallenge", fields: ["id"])
+  transactions: [Transaction] @hasMany(indexName: "byChallenge", fields: ["id"]) 
+}
+
+type ActivityFeedComment @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  activityFeedId: ID! @index(name: "byActivityFeed")
+  userId: ID! @index(name: "byUser")
+  comment: String
+  user: User @belongsTo(fields: ["activityFeedId"])
+}
+
+type ActivityFeedLike @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  activityFeedId: ID! @index(name: "byActivityFeed")
+  userId: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["activityFeedId"])
+}
+
+type ActivityFeed @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  owner: User @hasOne
+  content: String
+  media: AWSJSON
+  group: Group @hasOne
+  likes: [ActivityFeedLike] @hasMany(indexName: "byActivityFeed", fields: ["id"])
+  comments: [ActivityFeedComment] @hasMany(indexName: "byActivityFeed", fields: ["id"])
+  active: Boolean
+  schoolId: ID @index(name: "bySchool")
+}
+
+enum CampaignCategory {
+  CLIMATE_CHANGE
+  CLEAN_WATER
+  GARBAGE
+  PLASTIC
+  NATURE
+  OTHER
+}
+
+type Campaign @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  category: CampaignCategory
+  otherCategory: String
+  name: String
+  description: AWSJSON
+  approved: Boolean
+  live: Boolean
+  schoolId: ID! @index(name: "bySchool")
+  school: School @belongsTo(fields: ["studentId"])
+  studentId: ID! @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+  plan: AWSJSON
+  roles: AWSJSON
+  notes: AWSJSON
+  schedule: AWSJSON
+  changeLog: AWSJSON
+  invites: [CampaignInvite] @hasMany(indexName: "byCampaign", fields: ["id"])
+}
+
+enum UserRole {
+  ADMIN
+  STUDENT
+}
+
+enum SchoolMedium {
+  ENGLISH
+  HINDI
+  MARATHI
+  KANNADA
+}
+
+enum SchoolStage {
+  PRIMARY
+  SECONDARY
+  SENIOR_SECONDARY
+}
+
+enum SchoolGrade {
+  I
+  II
+  III
+  IV
+  V
+  VI
+  VII
+  VIII
+  IX
+  X
+  XI
+  XII
+}
+
+enum SchoolType {
+  PRIVATE
+  PUBLIC
+}
+
+enum Avatar {
+  CLEAN_ENERGY_DESIGNER
+  FIXER
+  GARBAGE_COLLECTOR
+  MOUNTAIN_CLIMBER
+  SCRAAP_1
+  THINKER
+  TOTTO_KUMARI
+  UPCYCLE
+}
+
+type School @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  type: SchoolType
+  stage: SchoolStage
+  medium: [SchoolMedium]
+  approved: Boolean
+  address: AWSJSON
+  address1: String
+  address2: String
+  zone: String
+  city: String
+  state: String
+  postal_code: String
+  primaryContact: AWSJSON
+  users: [SchoolUser] @hasMany(indexName: "bySchool", fields: ["id"])
+  students: [Student] @hasMany(indexName: "bySchool", fields: ["id"])
+  groups: [Group] @hasMany(indexName: "bySchool", fields: ["id"])
+  campaigns: [Campaign] @hasMany(indexName: "bySchool", fields: ["id"])
+  activityFeed: [ActivityFeed] @hasMany(indexName: "bySchool", fields: ["id"])
+}
+
+type User @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  phone: AWSPhone
+  role: [UserRole]
+  avatar: Avatar
+  student: Student @hasOne
+  deleted: Boolean
+  schools: [SchoolUser] @hasMany(indexName: "byUser", fields: ["id"])
+  likes: [ActivityFeedLike] @hasMany(indexName: "byUser", fields: ["id"])
+  comments: [ActivityFeedComment] @hasMany(indexName: "byUser", fields: ["id"])
+  devices: [UserDevice] @hasMany(indexName: "byUser", fields: ["id"])
+  groupInvites: [GroupInvite] @hasMany(indexName: "byUser", fields: ["id"])
+  notifications: [Notification] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type SchoolUser @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  role: UserRole
+  schoolId: ID @index(name: "bySchool")
+  school: School @belongsTo(fields: ["schoolId"])
+  userId: ID @index(name: "byUser")
+  user: User @belongsTo(fields: ["userId"])
+}
+
+type Student @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String
+  lastName: String
+  grade: SchoolGrade
+  schoolId: ID @index(name: "bySchool")
+  school: School @belongsTo(fields: ["schoolId"])
+  user: User @belongsTo
+  hasGroup: Boolean
+  deleted: Boolean
+  groupInvites: [GroupInvite] @hasMany(indexName: "byStudent", fields: ["id"])
+  campaignInvites: [CampaignInvite] @hasMany(indexName: "byStudent", fields: ["id"])
+  groups: [GroupMember] @hasMany(indexName: "byStudent", fields: ["id"])
+  campaigns: [Campaign] @hasMany(indexName: "byStudent", fields: ["id"])
+  challenges: [ChallengeActivity] @hasMany(indexName: "byStudent", fields: ["id"])
+  transactions: [Transaction] @hasMany(indexName: "byStudent", fields: ["id"]) 
+}
+
+type Group @model @searchable @auth(rules: [{allow: public}]) {
+  id: ID!
+  schoolId: ID! @index(name: "bySchool")
+  name: String
+  approved: Boolean
+  owner: User @hasOne
+  invites: [GroupInvite] @hasMany(indexName: "byGroup", fields: ["id"])
+  members: [GroupMember] @hasMany(indexName: "byGroup", fields: ["id"])
+  challenges: [ChallengeActivity] @hasMany(indexName: "byGroup", fields: ["id"])
+}
+
+type GroupMember @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  groupId: ID! @index(name: "byGroup")
+  group: Group @belongsTo(fields: ["groupId"])
+  studentId: ID! @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+}
+
+enum GroupInviteStatus {
+  PENDING
+  STUDENT_REJECTED
+  ACCEPTED  
+}
+
+type GroupInvite @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  groupId: ID! @index(name: "byGroup")
+  group: Group @belongsTo(fields: ["groupId"])
+  studentId: ID! @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+  userId: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userId"])
+  status: GroupInviteStatus
+}
+
+type CampaignInvite @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  campaignId: ID! @index(name: "byCampaign")
+  campaign: Campaign @belongsTo(fields: ["campaignId"])
+  studentId: ID! @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+  status: Boolean
+}
+
+enum DeviceType {
+  IOS
+  ANDROID
+}
+
+type UserDevice @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userId: ID! @index(name: "byUser")
+  type: DeviceType
+  name: String
+  meta: AWSJSON
+  token: String
+  arn: String
+}
+
+enum NotificationType {
+  GENERAL
+  ACTIVITY
+}
+
+type Notification @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userId: ID!
+    @index(
+      name: "byUser"
+      queryField: "notificationsByDate"
+      sortKeyFields: ["createdAt"]
+    )
+  type: NotificationType
+  typeId: String
+  senderId: ID!
+  sender: User @belongsTo(fields: ["senderId"])
+  title: String
+  message: String
+  sent: Boolean!
+  read: Boolean!
+  createdAt: String!
+}
+
+type Transaction @model @searchable @auth(rules: [{ allow: public }]) {
+  id: ID!
+  point: Int
+  description: String
+  studentId: ID @index(name: "byStudent")
+  student: Student @belongsTo(fields: ["studentId"])
+  challengeId: ID @index(name: "byChallenge")
+  challenge: Challenge @belongsTo(fields: ["challengeId"])
+  productId: ID @index(name: "byProduct")
+  product: Product @belongsTo(fields: ["productId"])
+}
+
+type ProductCategory @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  image: AWSURL
+  point: Int
+  products: [Product] @hasMany(indexName: "byCategory", fields: ["id"])
+}
+
+type Product @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  image: AWSURL
+  point: Int
+  categoryId: ID @index(name: "byCategory") 
+  category: ProductCategory @belongsTo(fields: ["categoryId"])
+  transactions: [Transaction] @hasMany(indexName: "byProduct", fields: ["id"]) 
+}

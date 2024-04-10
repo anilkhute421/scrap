@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-scrappy-staging-144028-authRole",
+      "UnauthRoleArn": "arn:aws:iam::760715344440:role/amplify-scrappy-staging-144028-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::760715344440:role/amplify-scrappy-staging-144028-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-scrappy-staging-144028-deployment",
+      "UnauthRoleName": "amplify-scrappy-staging-144028-unauthRole",
+      "StackName": "amplify-scrappy-staging-144028",
+      "StackId": "arn:aws:cloudformation:ap-south-1:760715344440:stack/amplify-scrappy-staging-144028/57a88a00-b9d1-11ed-93f3-066de522688a",
+      "AmplifyAppId": "d31obf0if0eh2s"
+    },
+    "categories": {
+      "api": {
+        "scrappy": {}
+      }
+    }
+  }
+}

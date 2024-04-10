@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "scrappy",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-05-07T06:51:29.038Z"
+}

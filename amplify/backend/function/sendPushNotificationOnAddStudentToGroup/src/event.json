@@ -1,0 +1,43 @@
+ {
+  "Records": [
+      {
+          "eventID": "ffbfa2fdf58cc25ae7fd1538b4e2cae0",
+          "eventName": "INSERT",
+          "eventVersion": "1.1",
+          "eventSource": "aws:dynamodb",
+          "awsRegion": "ap-south-1",
+          "dynamodb": {
+              "ApproximateCreationDateTime": 1681257070,
+              "Keys": {
+                  "id": {
+                      "S": "4cf76931-f4c5-43ff-9645-d494b2292a3b"
+                  }
+              },
+              "NewImage": {
+                  "studentId": {
+                      "S": "c0692451-8611-42ec-a3a8-5058297323e0"
+                  },
+                  "createdAt": {
+                      "S": "2023-04-11T23:51:09.607Z"
+                  },
+                  "__typename": {
+                      "S": "GroupMember"
+                  },
+                  "groupId": {
+                      "S": "0f278bc1-0157-4e3a-af24-79fe017c27b0"
+                  },
+                  "id": {
+                      "S": "4cf76931-f4c5-43ff-9645-d494b2292a3b"
+                  },
+                  "updatedAt": {
+                      "S": "2023-04-11T23:51:09.607Z"
+                  }
+              },
+              "SequenceNumber": "186798600000000008730723897",
+              "SizeBytes": 251,
+              "StreamViewType": "NEW_AND_OLD_IMAGES"
+          },
+          "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/GroupMember-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-03T14:53:35.355"
+      }
+  ]
+}

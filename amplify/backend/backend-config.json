@@ -1,0 +1,455 @@
+{
+  "api": {
+    "scrappy": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2024-05-06T06:51:05.963Z",
+              "apiKeyExpirationDays": 365,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "scrappybackend": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "function": {
+    "registerUserDeviceForPushNotification": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotification": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnAddStudentToGroup": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnCampaignApproval": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnCampaignInvite": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnChallengeInvite": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnChallengeSubmission": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sendPushNotificationOnTeamCreation": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        },
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "scrappy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "geo": {},
+  "parameters": {
+    "AMPLIFY_auth_scrappybackend_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_auth_scrappybackend_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "scrappybackend"
+        }
+      ]
+    },
+    "AMPLIFY_function_registerUserDeviceForPushNotification_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "registerUserDeviceForPushNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_registerUserDeviceForPushNotification_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "registerUserDeviceForPushNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_registerUserDeviceForPushNotification_snsPlatformApplicationArn": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "registerUserDeviceForPushNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnAddStudentToGroup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnAddStudentToGroup"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnAddStudentToGroup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnAddStudentToGroup"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnCampaignApproval_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnCampaignApproval"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnCampaignApproval_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnCampaignApproval"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnCampaignInvite_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnCampaignInvite"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnCampaignInvite_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnCampaignInvite"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnChallengeInvite_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnChallengeInvite"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnChallengeInvite_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnChallengeInvite"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnChallengeSubmission_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnChallengeSubmission"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnChallengeSubmission_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnChallengeSubmission"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnTeamCreation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnTeamCreation"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotificationOnTeamCreation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotificationOnTeamCreation"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotification_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendPushNotification_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendPushNotification"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "scrappy": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

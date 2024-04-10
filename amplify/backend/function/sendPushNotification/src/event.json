@@ -1,0 +1,61 @@
+{
+  "Records": [
+    {
+      "eventID": "76b180a47731a13fc1b3b9f2cfa011e3",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "ap-south-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1678481073,
+        "Keys": {
+          "id": {
+            "S": "c7cdc1d5-f1a7-4002-9cf0-7ce9740643f5"
+          }
+        },
+        "NewImage": {
+          "createdAt": {
+            "S": "2023-03-10T20:44:32.855Z"
+          },
+          "senderId": {
+            "S": "8e39e080-b81f-4dcd-93e7-a9fa9959ec8e"
+          },
+          "read": {
+            "BOOL": false
+          },
+          "__typename": {
+            "S": "Notification"
+          },
+          "typeId": {
+            "S": "aa9d557a-5eee-475c-9b79-24743a803b60"
+          },
+          "id": {
+            "S": "a55ab7d8-248b-421a-9d85-8902aa7e2ba2"
+          },
+          "title": {
+            "S": "fardeen"
+          },
+          "type": {
+            "S": "MESSAGE"
+          },
+          "sent": {
+            "BOOL": false
+          },
+          "userId": {
+            "S": "1f388ef7-933a-4f91-b262-010fae96701e"
+          },
+          "updatedAt": {
+            "S": "2023-03-10T20:44:32.855Z"
+          },
+          "message": {
+            "S": "hello"
+          }
+        },
+        "SequenceNumber": "882000000000004086281719",
+        "SizeBytes": 329,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/Notification-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-23T14:13:05.534Z"
+    }
+  ]
+}

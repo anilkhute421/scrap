@@ -1,0 +1,87 @@
+ {
+  "Records": [
+      {
+          "eventID": "aaaeff913629d074a54e319e04aff2f0",
+          "eventName": "MODIFY",
+          "eventVersion": "1.1",
+          "eventSource": "aws:dynamodb",
+          "awsRegion": "ap-south-1",
+          "dynamodb": {
+              "ApproximateCreationDateTime": 1681258793,
+              "Keys": {
+                  "id": {
+                      "S": "a3edaca9-b754-4d5e-b7d0-68626f0cc379"
+                  }
+              },
+              "NewImage": {
+                  "createdAt": {
+                      "S": "2023-04-12T00:19:52.702Z"
+                  },
+                  "meta": {
+                      "BOOL": false
+                  },
+                  "__typename": {
+                      "S": "UserDevice"
+                  },
+                  "name": {
+                      "S": "sai"
+                  },
+                  "id": {
+                      "S": "a3edaca9-b754-4d5e-b7d0-68626f0cc379"
+                  },
+                  "arn": {
+                      "S": "arn:aws:sns:ap-south-1:760715344440:endpoint/GCM/scrappy/f358171b-c322-352b-b249-dc65ab136145"
+                  },
+                  "type": {
+                      "S": "IOS"
+                  },
+                  "userId": {
+                      "S": "fdsfdhj"
+                  },
+                  "token": {
+                      "S": "dPTi3YZzSOC8t7EPRSd9B4:APA91bFvWuVg5JBHQ4vSvmfFnKVLHc0DT0xoE4x3db_5nNx8I2LTvlP9WBRAv48a9nUlTSSB96hLu8lCnyv5lgbHiSreBoHoj-dtVAAGToU1iJv9l_yHDWR_V0eipkLiGgixCghOwT0F"
+                  },
+                  "updatedAt": {
+                      "S": "2023-04-12T00:19:53.379Z"
+                  }
+              },
+              "OldImage": {
+                  "createdAt": {
+                      "S": "2023-04-12T00:19:52.702Z"
+                  },
+                  "meta": {
+                      "BOOL": false
+                  },
+                  "__typename": {
+                      "S": "UserDevice"
+                  },
+                  "name": {
+                      "S": "sai"
+                  },
+                  "id": {
+                      "S": "a3edaca9-b754-4d5e-b7d0-68626f0cc379"
+                  },
+                  "arn": {
+                      "S": "arn"
+                  },
+                  "type": {
+                      "S": "IOS"
+                  },
+                  "userId": {
+                      "S": "fdsfdhj"
+                  },
+                  "token": {
+                      "S": "dPTi3YZzSOC8t7EPRSd9B4:APA91bFvWuVg5JBHQ4vSvmfFnKVLHc0DT0xoE4x3db_5nNx8I2LTvlP9WBRAv48a9nUlTSSB96hLu8lCnyv5lgbHiSreBoHoj-dtVAAGToU1iJv9l_yHDWR_V0eipkLiGgixCghOwT0F"
+                  },
+                  "updatedAt": {
+                      "S": "2023-04-12T00:19:52.702Z"
+                  }
+              },
+              "SequenceNumber": "101312200000000015491513345",
+              "SizeBytes": 788,
+              "StreamViewType": "NEW_AND_OLD_IMAGES"
+          },
+          "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/UserDevice-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-21T16:11:56.116"
+      }
+  ]
+}

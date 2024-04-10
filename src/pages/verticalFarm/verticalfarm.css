@@ -1,0 +1,9 @@
+.vertical-farm-header{
+    background-image: url('../../assets/images/vertical-farm/header.png');
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

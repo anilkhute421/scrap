@@ -1,0 +1,87 @@
+{
+  "Records": [
+    {
+      "eventID": "80380f30fe16a0169842b92eaea4c091",
+      "eventName": "MODIFY",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "ap-south-1",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1681262048,
+        "Keys": {
+          "id": {
+            "S": "a9227be6-c824-47f9-b2c3-f718c30a4562"
+          }
+        },
+        "NewImage": {
+          "studentId": {
+            "S": "1234"
+          },
+          "createdAt": {
+            "S": "2023-04-12T01:08:29.149Z"
+          },
+          "challengeId": {
+            "S": "campaign123"
+          },
+          "__typename": {
+            "S": "ChallengeActivity"
+          },
+          "groupId": {
+            "S": "123"
+          },
+          "id": {
+            "S": "a9227be6-c824-47f9-b2c3-f718c30a4562"
+          },
+          "invitedByStudentId": {
+            "S": ""
+          },
+          "point": {
+            "N": "10"
+          },
+          "status": {
+            "S": "SUBMITTED"
+          },
+          "updatedAt": {
+            "S": "2023-04-12T01:14:08.709Z"
+          }
+        },
+        "OldImage": {
+          "studentId": {
+            "S": "1234"
+          },
+          "createdAt": {
+            "S": "2023-04-12T01:08:29.149Z"
+          },
+          "challengeId": {
+            "S": "campaign123"
+          },
+          "__typename": {
+            "S": "ChallengeActivity"
+          },
+          "groupId": {
+            "S": "123"
+          },
+          "id": {
+            "S": "a9227be6-c824-47f9-b2c3-f718c30a4562"
+          },
+          "invitedByStudentId": {
+            "S": ""
+          },
+          "point": {
+            "N": "10"
+          },
+          "status": {
+            "S": "SUBMITTED"
+          },
+          "updatedAt": {
+            "S": "2023-04-12T01:13:14.877Z"
+          }
+        },
+        "SequenceNumber": "139749500000000016812847218",
+        "SizeBytes": 472,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:ap-south-1:760715344440:table/ChallengeActivity-5bpczfmt5fehxbzh3yqkto4nou-staging/stream/2023-03-13T13:53:20.557"
+    }
+  ]
+}

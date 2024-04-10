@@ -1,0 +1,859 @@
+input[type=radio] {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+    border-color: black;
+    /* -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black; */
+}
+
+.coverImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.playCityCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/cover2sky.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: round;
+    padding: 50px;
+    color: white;
+}
+
+.skyFarmConstructionCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/envelopesky.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    padding: 25px;
+    color: black;
+}
+
+.planCoverPage {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/plan.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    color: black;
+}
+
+.vegetablesCoverPage {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/presspaper.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    color: black;
+}
+
+.modal-content {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/presspaper.webp');
+    width: 100%;
+    background-size: cover;
+    color: black;
+}
+
+.buildCoverImage {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/build.webp');
+    height: 100vh;
+    width: 100%;
+    background-repeat: round;
+    background-size: contain;
+    color: black;
+}
+
+.farmBuildCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/farmbuild.webp');
+    height: 100vh;
+    width: 100%;
+    background-repeat: round;
+    background-size: contain;
+    position: relative;
+}
+
+.farmBuildCover .uploadImage {
+    position: absolute;
+    bottom: 23%;
+
+}
+
+.uploadImage .buildImages {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    position: absolute;
+    top: -120%;
+    left: 20%;
+}
+
+.farmBuildCover video {
+    position: absolute;
+    bottom: 35%;
+    width: 142px;
+    right: 3%;
+}
+
+.uploadVideo {
+    position: absolute;
+    bottom: 35%;
+    width: 142px;
+    right: 3%;
+}
+
+
+
+
+.farmBuildCover .startUploadinButton {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 7%;
+}
+
+.farmBuildCover .uploadFieldNotes {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 27%;
+}
+
+.farmBuildCover .uploadFieldNotes .req {
+    margin-left: 12%;
+    margin-top: -10%;
+}
+
+.buildCoverImage .tapeLabel {
+    position: relative;
+    top: 30%;
+}
+
+.buildCoverImage .tapeLabel img {
+    width: 100%;
+}
+
+.buildCoverImage .tapeLabel .tapeHeading {
+    position: absolute;
+    top: 44%;
+    left: 13%;
+    font-family: 'heyOctober';
+    font-weight: 100;
+    font-size: 36px;
+    color: #FF0092;
+}
+
+
+.vegetablesCoverPage .label img {
+    width: 75% !important;
+}
+
+.vegetablesCoverPage .label .heading {
+    font-family: 'heyOctober';
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+}
+
+.vegetablesCoverPage .calendar {
+    padding: 20px;
+    width: 100%;
+    overflow: auto;
+}
+
+.vegetablesCoverPage .calendar img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.planCoverPage .planCard {
+    position: absolute;
+    top: 25%;
+    background: rgba(255, 255, 255, 0.89);
+    border-radius: 22px;
+    padding: 20px;
+    margin: 10px 20px;
+}
+
+.planCoverPage .planCard .heading {
+    font-family: 'heyOctober';
+    font-weight: 100;
+
+}
+
+.skyFarmConstructionCover .card .card-body {
+    height: 85vh;
+    overflow: auto;
+}
+
+.skyFarmCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/presspaper.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.skyFarmCover .bannerImage {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.skyFarmCover .myContent {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+@media (max-height: 800px) {
+    .skyFarmCover .myContent {
+        padding: 20px;
+        height: 300px;
+        overflow-y: auto;
+    }
+}
+
+.designCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/skypage.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: round;
+    padding: 50px;
+    color: white;
+}
+
+.gameCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/uploadGame.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: round;
+    padding: 50px;
+}
+
+.videoCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/uploadVideo.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: round;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.designCover .designContent {
+    color: black;
+    position: absolute;
+    top: 40%;
+    right: 34px;
+    left: 43px;
+}
+
+.designContent .heading {
+    font-family: 'heyOctober';
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.designContent p {
+    font-size: 16px;
+}
+
+.menuCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/menu.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.menu .menuNext {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+.menu .menuNext img {
+    width: 70px;
+}
+
+
+
+.researchPageCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/research.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.uploadMapCoverPage {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/wall.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.whoWeMetCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/paper.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.verticalFarmCover {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/paper.webp');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.flowers {
+    background-image: url('https://scrappy-afe2cd64144028-staging.s3.ap-south-1.amazonaws.com/public/public/flowers.webp');
+    background-size: contain;
+}
+
+.flowers .uploadImage .flrImage {
+    width: 70%;
+}
+
+.flowers .form .bookImage {
+    width: 50%;
+}
+
+.flowers .MyContainer {
+    height: 84vh;
+    overflow: auto;
+    padding: 50px 0px;
+}
+
+.flowers .MyContainer .myform {
+    border: 1px solid #5F6264;
+    margin: 0px 66px;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.flowers .MyContainer .myform2 {
+    margin: 0px 66px;
+    padding: 10px;
+}
+
+.myform .vegetables img {
+    width: 50px;
+}
+
+
+.myform2 .sub-heading {
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+}
+
+.uploadViewDesign {
+    position: relative;
+}
+
+.uploadViewDesign img {
+    width: 100%;
+    position: relative;
+}
+
+.uploadViewDesign .formBtn {
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+}
+
+
+
+.uploadMapCoverPage .container {
+    height: 90%;
+    overflow: auto;
+}
+
+.researchPageCover .mapImage {
+    width: 200px;
+    position: absolute;
+    top: 135px;
+}
+
+.menuCover .menu {
+    margin-top: 82px;
+}
+
+.menuCover .menu .menuItem {
+    margin-bottom: 48px;
+    transform: rotate(4.7deg);
+}
+
+.playcityImage {
+    width: 70%;
+}
+
+.diagnoalText {
+    font-family: 'heyOctober';
+    font-weight: 100;
+    display: inline-flex;
+    position: relative;
+    top: -7px;
+    transform: rotate(-10.46deg);
+}
+
+.diagnoalText img {
+    position: absolute;
+    width: 13px;
+    right: 5px;
+    bottom: -13px;
+}
+
+.navigationBar {
+    background-color: #FF018F;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+
+.prev,
+.next {
+    width: 60px;
+}
+
+.navigationButtons .prev {
+    position: absolute;
+    bottom: 25px;
+}
+
+.navigationButtons img {
+    width: 75px;
+}
+
+.navigationButtons .next {
+    position: absolute;
+    right: 50px;
+    bottom: 25px;
+}
+
+.navHeading {
+    background-color: #FF018F;
+    text-align: center;
+    font-family: 'heyOctober';
+    font-weight: 100;
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+
+.navHeading .title {
+    font-size: 36px;
+    color: white;
+}
+
+.researchPage {
+    color: black;
+}
+
+.researchPage .heading {
+    font-family: 'heyOctober';
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.notesPage {
+    height: 90vh;
+    overflow: auto;
+    padding: 10px;
+}
+
+.notesPage .heading {
+    font-family: 'heyOctober';
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.notesPage .bookImage {
+    display: flex;
+    justify-content: center;
+}
+
+.notesPage .bookImage img {
+    width: 90%;
+}
+
+
+.researchPageCard {
+    background: rgba(255, 243, 218, 0.6);
+    border: 1px solid #707070;
+    backdrop-filter: blur(4px);
+    margin-left: 6px;
+    border-radius: 10px;
+    color: #181818;
+    padding: 11px;
+
+}
+
+
+.researchPageCard h5 {
+    font-size: 17px;
+    text-align: left;
+}
+
+.researchPageCard .mytextArea {
+    width: 100%;
+    background: none;
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.researchPageCard .mytextArea:focus {
+    outline: none;
+}
+
+
+.researchPageCover .setMargin {
+    margin-top: 125px;
+}
+
+.uploadImage img {
+    width: 100%;
+}
+
+.imagePreview {
+    position: relative;
+}
+
+.imagePreview img {
+    width: 70%;
+}
+
+.imagePreview .preview {
+    width: 50%;
+    height: 180px;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    object-fit: contain;
+}
+
+.uploadImage .uploadedImage {
+    width: 60%;
+    height: 180px;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    object-fit: contain;
+}
+
+.uploadImage .farmImageUpload {
+    width: 54%;
+    height: 180px;
+    position: absolute;
+    left: 23%;
+    top: 8%;
+    object-fit: contain;
+}
+
+.uploadImage .farmImageUpload2 {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 17px;
+}
+
+.purpleBtn {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+
+.purpleBtn button {
+    border: none;
+    background: none;
+}
+
+.purpleBtn img {
+    width: 160px;
+}
+
+.purpleBtn .buttonText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.purpleBtn .buttonText h5 {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+.researchContainer {
+    height: 65%;
+    overflow-y: auto;
+}
+
+.selectTag select:focus {
+    outline: none;
+}
+
+.selectTag select {
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid;
+}
+
+.selectTag {
+    padding: 10px;
+}
+
+.postBox img {
+    width: 50%;
+}
+
+.postBox .uploadYourMapBtn {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    top: 36%;
+    right: 35%;
+}
+
+.myFormGroup {
+    text-align: left;
+    display: inline-flex;
+    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.myFormGroup label {
+    font-size: 12px;
+    color: #393B3C;
+}
+
+.myFormGroup input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #5F6264;
+}
+
+.myFormGroup input::placeholder {
+    color: black;
+    font-size: 14px;
+}
+
+.myFormGroup textarea {
+    width: 100%;
+    background: none;
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    border-color: black;
+}
+
+.myFormGroup textarea:focus {
+    outline: none;
+}
+
+.paperLable {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.paperLable img {
+    width: 80%;
+}
+
+.paperLable .uploadText {
+    position: absolute;
+    top: 20%;
+    color: black;
+}
+
+.progressBar {
+    position: absolute;
+    width: 60%;
+    top: 32%;
+    background-color: #FFA7EF;
+    margin: 15px 0;
+    height: 30px;
+    border-radius: 0px;
+
+}
+
+.progress-done {
+    /* background: linear-gradient(to left, #F2709C, #FF9472); */
+    background: #CE008C;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+
+.upload-dashed {
+    width: 65%;
+    height: 229px;
+    border: 1.91586px dashed #6E333B;
+    border-radius: 5.74757px;
+}
+
+.verticalLabel img {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.verticalLabel {
+    position: relative;
+}
+
+.verticalLabel .verticalTitle {
+    top: 53px;
+    position: absolute;
+    right: 26%;
+    font-family: 'heyOctober';
+    font-weight: 100;
+    color: #E21A45;
+    font-size: 20px;
+}
+
+.required {
+    text-align: start;
+    color: red;
+}
+
+.uploadViewDesign .preview {
+    position: absolute;
+    width: 50%;
+    height: 180px;
+    left: 25%;
+    top: 5%;
+    object-fit: contain;
+}
+
+
+.calendar td {
+    border: 1px solid;
+}
+
+.calendar .addVegetables .cell {
+    width: 86px;
+    height: 46px;
+}
+
+.calendar .addVegetables .active {
+    background-color: #009CA6;
+}
+
+.calendar .addVegetables .cell1 {
+    width: 150px;
+    height: 46px;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.calendar .addVegetables thead {
+    text-align: center;
+}
+
+.calendar .addVegetables th {
+    padding: 20px;
+}
+
+
+.addVegetables {
+    height: auto;
+    width: max-content;
+    overflow: auto;
+    background: #FFFCF2;
+    border-radius: 7px;
+    padding-bottom: 20px;
+}
+
+.cropTitle {
+    font-family: 'heyOctober';
+}
+
+.gotoLastPage {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 19%;
+}
+
+.videoCover .homeIcon img {
+    width: 50px;
+}
+
+.videoCover .homeIcon {
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+}
+
+.buildGoNext {
+    width: 80px;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.deleteVegiesRow {
+    width: 20px !important;
+    margin-left: 10px !important;
+    margin-top: -5px !important;
+}
